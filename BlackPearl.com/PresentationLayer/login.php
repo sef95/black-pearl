@@ -1,7 +1,7 @@
 <?php 
 
-	//set_include_path('C:/Users/Cem/xampp/htdocs/BlackPearl.com');
-	require_once(dirname(__FILE__) . "/../LogicLayer/UserManager.php");
+	set_include_path('C:/xampp/htdocs/BlackPearl.com');
+	require_once("LogicLayer/UserManager.php");
 	
 	$errorMeesage = "";
 	
@@ -32,9 +32,9 @@
 		$_SESSION['isadmin'] = $user[0]->getIsadmin();;
 		
 		if($user[0]->getIsadmin() == 0)
-			header("location: tickets.php");
+			header("location: myAccount.php");
 		else
-			header("location: adminpage.php");
+			header("location: adminPage.php");
 		
 	}
 	
@@ -111,7 +111,7 @@
 			  <li><a href="#">Feedback</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
-			  <li ><a href="/BlackPearl.com/PresentationLayer/signup.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+			  <li ><a href="/BlackPearl.com/PresentationLayer/signup.php"><span class="glyphicon glyphicon-user"></span> Sign Up </a></li>
 			  <li class="active"><a href="/BlackPearl.com/PresentationLayer/login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
 			</ul>
 		  </div>
@@ -123,12 +123,12 @@
 						
 							<div class="form-group ">
 								<label for="tcno">Enter TC NO / SSN:</label>
-								<input type="text" class="form-control" id="name" placeholder="TC / SSN" name="tcno" required>
+								<input type="text" class="form-control" id="name" placeholder="TC / SSN" name="tcno">
 							</div>
 							<br/>
 							<div class="form-group">
 								<label for="password">Password:</label>
-								<input type="password" class="form-control" id="password" placeholder="Enter Password" name="password" required>
+								<input type="password" class="form-control" id="password" placeholder="Enter Password" name="password">
 							</div>
 							<br/>
 							
