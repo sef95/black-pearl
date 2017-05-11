@@ -12,7 +12,6 @@
 		private $nationality;
 		private $isadmin;
 		
-		
 		function __construct($id = NULL, $tcno = NULL, $name = NULL, $surname = NULL, $email = NULL, $phone = NULL, $birthdate = NULL, $gender = NULL, $password = NULL, $nationality = NULL, $isadmin = NULL) {
 			$this->id = $id;
 			$this->tcno = $tcno;

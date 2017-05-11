@@ -1,7 +1,8 @@
 <?php 
-	//set_include_path('C:/Users/Cem/xampp/htdocs/BlackPearl.com');
-	require_once(dirname(__FILE__) . "/../DataLayer/DB.php");
-	require_once(dirname(__FILE__) . "/../LogicLayer/User.php");
+	set_include_path('C:/xampp/htdocs/BlackPearl.com');
+	require_once("DataLayer/DB.php");
+	require_once("LogicLayer/User.php");
+	
 	
 	class UserManager {
 		
@@ -18,15 +19,14 @@
 			
 			return $allUsers;
 		}
+
 		
 		public static function insertNewUser($tcno, $name, $surname, $email, $phone, $birthdate, $gender, $password, $nationality) {
 			$db = new DB();
-			$success = $db->executeQuery("INSERT INTO `user`(`tcno`, `name`, `surname`, `email`, `phone`, `birthdate`, `gender`, `password`, `nationality`) VALUES ('$tcno','$name','$surname','$email','$phone','$birthdate','$gender','$password','$nationality')");
+			$success = $db->executeQuery("INSERT INTO user(tcno, name, surname, email, phone, birthdate, gender, password, nationality) VALUES ('$tcno','$name','$surname','$email','$phone','$birthdate','$gender','$password','$nationality')");
 			
 			return $success;
 		}
-		
-		
 		
 		public static function loginUser($tcno, $password)
 		{
@@ -42,6 +42,19 @@
 			
 			return $allUsers;
 		}
+		
+		public static function changePassword($userid, $newPassword) {
+			$db = new DB();
+			$success = $db->executeQuery("UPDATE user SET user.password='$newPassword' WHERE user.userid=$userid");
+			
+			return $success;
+		}
+		
+		public static function deleteUser($userid) {
+			$db = new DB();
+			$success = $db->executeQuery("DELETE FROM user WHERE user.userid=$userid");
+			return $success;
+		}
+		
 	}
 ?>
-

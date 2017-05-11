@@ -1,7 +1,7 @@
 <?php 
 
-	//set_include_path('C:/Users/Cem/xampp/htdocs/BlackPearl.com');
-	require_once(dirname(__FILE__)."/../LogicLayer/UserManager.php");
+	set_include_path('C:/xampp/htdocs/BlackPearl.com');
+	require_once("LogicLayer/UserManager.php");
 	
 	$errorMeesage = "";
 	
@@ -105,8 +105,8 @@
 			  <li><a href="#">Feedback</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
-			  <li class="active"><a href="/BlackPearl.com/PresentationLayer/signup.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-			  <li><a href="/BlackPearl.com/PresentationLayer/login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+			  <li class="active"><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+			  <li><a href="/BlackPearl.com/PresentationLayer/Login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
 			</ul>
 		  </div>
 		</nav>
