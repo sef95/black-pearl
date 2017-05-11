@@ -1,0 +1,41 @@
+
+body {
+			background-color: white;
+			font: 20px Montserrat, sans-serif;
+			
+			background: url('http://cdn.wonderfulengineering.com/wp-content/uploads/2014/04/ship-image-5.jpg') center top no-repeat;
+			background-size: cover;
+			background-attachment: fixed;
+			
+		}
+
+h1 {
+			color: black;
+			text-align: left;
+		}
+
+		p {
+			font-family: verdana;
+			font-size: 20px;
+		}
+		div {
+			align:justify;
+		}
+		.form-group {
+			padding:5px;
+		}
+		.right {
+			padding-left:8cm;
+			
+		}
+		
+		.container-fluid {
+			
+			align:5px;
+		}
+		.contaier-form {
+			width:60%;
+			border-style:solid;
+			background-color:white;
+			
+		}
